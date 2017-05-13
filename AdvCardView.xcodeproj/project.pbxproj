@@ -14,6 +14,7 @@
 		86C7D8A61EC6B16600D67672 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86C7D8A41EC6B16600D67672 /* LaunchScreen.storyboard */; };
 		86C7D8B11EC6B16600D67672 /* AdvCardViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C7D8B01EC6B16600D67672 /* AdvCardViewTests.swift */; };
 		86C7D8BC1EC6B16600D67672 /* AdvCardViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C7D8BB1EC6B16600D67672 /* AdvCardViewUITests.swift */; };
+		86C7D8CA1EC6B17B00D67672 /* AdvCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C7D8C91EC6B17B00D67672 /* AdvCardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		86C7D8B71EC6B16600D67672 /* AdvCardViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AdvCardViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		86C7D8BB1EC6B16600D67672 /* AdvCardViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvCardViewUITests.swift; sourceTree = "<group>"; };
 		86C7D8BD1EC6B16600D67672 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		86C7D8C91EC6B17B00D67672 /* AdvCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdvCardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 			children = (
 				86C7D89B1EC6B16600D67672 /* AppDelegate.swift */,
 				86C7D89D1EC6B16600D67672 /* ViewController.swift */,
+				86C7D8C91EC6B17B00D67672 /* AdvCardView.swift */,
 				86C7D89F1EC6B16600D67672 /* Main.storyboard */,
 				86C7D8A21EC6B16600D67672 /* Assets.xcassets */,
 				86C7D8A41EC6B16600D67672 /* LaunchScreen.storyboard */,
@@ -259,6 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				86C7D8CA1EC6B17B00D67672 /* AdvCardView.swift in Sources */,
 				86C7D89E1EC6B16600D67672 /* ViewController.swift in Sources */,
 				86C7D89C1EC6B16600D67672 /* AppDelegate.swift in Sources */,
 			);
