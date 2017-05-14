@@ -14,12 +14,22 @@ class AdvCardView: UIView, UIGestureRecognizerDelegate {
     private var gesture: UIPanGestureRecognizer!
     private var toView: UIView!
     private var getFrame: CGRect!
+    fileprivate var cellId = "Cell"
     
 //    public override init(frame: CGRect) {
 //        super.init(frame: frame)
 //        setup()
 //        getFrame = frame
 //    }
+    
+    lazy var collectionView: UICollectionView = {
+        let layout = UICollectionViewFlowLayout()
+        let cv = UICollectionView(frame: CGRect(x: 0, y: 0, width: 80, height: 80), collectionViewLayout: layout)
+        cv.backgroundColor = UIColor.black
+        cv.delegate = self
+        cv.dataSource = self
+        return cv
+    }()
     
     public init(mainFrame: CGRect){
         super.init(frame: mainFrame)
@@ -33,6 +43,9 @@ class AdvCardView: UIView, UIGestureRecognizerDelegate {
     }
     
     private func setup() {
+        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "Cell")
+        self.addSubview(collectionView)
+        
         photo = UIImageView(frame: CGRect(x: 0, y: 120, width: 80, height: 80))
         photo.image = UIImage(named: "TS")
         self.addSubview(photo)
@@ -58,6 +71,20 @@ class AdvCardView: UIView, UIGestureRecognizerDelegate {
         UIView.transition(from: self, to: toView, duration: 1, options: .transitionFlipFromRight) { (Bool) in
             return
         }
+    }
+    
+}
+
+extension AdvCardView: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
+    
+    public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int{
+        return 3
+    }
+    
+    public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell{
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath)
+        cell.backgroundColor = UIColor.red
+        return cell
     }
     
 }
